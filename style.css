@@ -72,8 +72,8 @@ header a {
   grid-template-columns: 1fr;
   grid-gap: 88px;
   padding: 120px 24px;
-  }
-  
+}
+
 .my-works .work-item {
   background-color: #fff;
   border: 1px solid #dfe1e6;
@@ -83,16 +83,16 @@ header a {
   padding: 16px;
   justify-content: flex-start;
   align-items: baseline;
-  }
+}
   
 .technical-knowledge-list li img {
   margin-right: 16px;
-  }
-  
+}
+
 .my-works .work-item img {
     width: 100%;
-  }
-  
+}
+
 .my-works .work-item .work-title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -102,31 +102,31 @@ header a {
   display: block;
   padding: 12px 0;
   color: #172b4d;
-  }
-  
+}
+
 .my-works .work-item .work-subtitle {
   display: flex;
   color: #7a869a;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  }
-  
+}
+
 .my-works .work-item .work-subtitle span {
   height: 100%;
   position: relative;
-  }
-  
+}
+
 .my-works .work-item .work-subtitle span + span {
   margin: 0 16px;
-  }
-  
+}
+
 .my-works .work-item .work-subtitle span:first-of-type {
   color: #344563;
   text-transform: uppercase;
   margin-right: 16px;
-  }
-  
+}
+
 .my-works .work-item .work-subtitle span + span::before {
   width: 8px;
   height: 8px;
@@ -138,22 +138,22 @@ header a {
   top: 50%;
   transform: translateY(-50%);
   content: "";
-  }
-  
+}
+
 .my-works .work-item .work-details {
   color: #344563;
   font-size: 15px;
   line-height: 24px;
   margin: 20px 0 12px;
-  }
-  
+}
+
 .my-works .work-item .work-technologies {
   display: flex;
   justify-content: flex-start;
   list-style: none;
   padding-left: 0;
-  }
-  
+}
+
 .my-works .work-item .work-technologies .technology-tag {
   background: #ebebff;
   border-radius: 8px;
@@ -163,7 +163,7 @@ header a {
   font-size: 12px;
   line-height: 16px;
   margin-right: 8px;
-  }
+}
 
 .my-works .work-item .view-work-btn,
 .about-me .resume-btn {
@@ -201,8 +201,8 @@ header a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  }
-  
+}
+
 .about-me .top,
 .about-me .bottom {
   display: flex;
@@ -210,38 +210,38 @@ header a {
   align-items: baseline;
   margin: 24px 0;
   width: 100%;
-  }
-  
+}
+
 .about-me .top .title {
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
   color: #172b4d;
-  }
-  
+}
+
 .about-me .bottom .technical-knowledge {
    width: 100%;
-  }
-  
+}
+
 .about-me .bottom .technical-knowledge .knowledge-area {
   padding: 24px 12px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #dfe1e6;
-  }
-  
+}
+
 .about-me .bottom .technical-knowledge .knowledge-area.active {
   border: none;
-  }
-  
+}
+
 .about-me .bottom .technical-knowledge .knowledge-area .title {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  }
-  
+}
+
 .technical-knowledge-list li {
   padding: 12px;
   background-color: #f7f7f9;
@@ -253,4 +253,4 @@ header a {
   font-size: 15px;
   line-height: 20px;
   color: #253858;
-  }
+}
