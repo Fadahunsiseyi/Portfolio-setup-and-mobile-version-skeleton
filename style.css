@@ -8,7 +8,11 @@ a {
   text-decoration: none;
 }
 
-.navbar {
+li {
+    list-style-type: none;
+}
+
+.header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,28 +20,31 @@ a {
   margin: 10px 0;
 }
 
-.navbar-brand {
-  font-weight: 600px;
-  font-size: 20px;
+.header a {
+  color: #6070FF;
+}
+
+.header-brand {
+  font-weight: 700px;
+  font-size: 25px;
   color: #28352f;
 }
 
 .header-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  background-image: linear-gradient(to right, rgba(226, 235, 238, 0.62), rgba(195, 206, 200, 0.52));
+  background-image: url(./img/header-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-section-title {
   color: #172b4d;
   margin: 10px 0;
-  text-align: center;
   font-weight: 700;
   font-size: 30px;
-  width: 327px;
+  width: 300px;
 }
 
 .header-section-title span {
@@ -45,18 +52,18 @@ a {
 }
 
 .header-section-text {
-  margin: 10px 0;
-  width: 327px;
-  text-align: center;
-  color: #172b4d;
-  font-size: 20px;
-  line-height: 28px;
+  margin: 20px 0;
+  color: #344563;
+  font-size: 17px;
+  line-height: 24px;
 }
 
-.header-section-icon-container {
-  margin: 10px 0;
-  padding: 10px;
+.header-section .connect {
+    color: #6070FF;
+}
+
+.header-section-icon-container ul {
+  margin: 15px 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
