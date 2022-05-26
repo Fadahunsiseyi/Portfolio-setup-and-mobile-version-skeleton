@@ -56,12 +56,140 @@ header a {
   line-height: 24px;
 }
 
-.header-section .connect {
+ .connect {
   color: #6070ff;
+  margin: 10px 0 0;
 }
 
 .header-section-icon-container ul {
   margin: 15px 0;
   display: flex;
   flex-direction: row;
+}
+
+.my-works {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 88px;
+    padding: 120px 24px;
+    background-color: #f7f7f9;
+  }
+  
+  .my-works .work-item {
+    background-color: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  
+  .technical-knowledge-list li img {
+    margin-right: 16px;
+  }
+  
+  .my-works .work-item img {
+    width: 100%;
+  }
+  
+  .my-works .work-item .work-title {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    display: block;
+    padding: 12px 0;
+    color: #172b4d;
+  }
+  
+  .my-works .work-item .work-subtitle {
+    display: flex;
+    color: #7a869a;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  
+  .my-works .work-item .work-subtitle span {
+    height: 100%;
+    position: relative;
+  }
+  
+  .my-works .work-item .work-subtitle span + span {
+    margin: 0 16px;
+  }
+  
+  .my-works .work-item .work-subtitle span:first-of-type {
+    color: #344563;
+    text-transform: uppercase;
+    margin-right: 16px;
+  }
+  
+  .my-works .work-item .work-subtitle span + span::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #c1c7d0;
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+  }
+  
+  .my-works .work-item .work-details {
+    color: #344563;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 20px 0 12px;
+  }
+  
+  .my-works .work-item .work-technologies {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .my-works .work-item .work-technologies .technology-tag {
+    background: #ebebff;
+    border-radius: 8px;
+    padding: 4px 12px;
+    color: #6070ff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 8px;
+  }
+
+  .my-works .work-item .view-work-btn,
+.about-me .resume-btn {
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px;
+  margin: 24px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.my-works .work-item .view-work-btn:enabled,
+.about-me .resume-btn:enabled {
+  color: #6070ff;
+  border: solid 1px #6070ff;
+  background-color: #fff;
+}
+
+.my-works .work-item .view-work-btn:hover,
+.my-works .work-item .view-work-btn:active,
+.about-me .resume-btn:hover,
+.about-me .resume-btn:active {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #6070ff;
 }
