@@ -84,13 +84,13 @@ header a {
   justify-content: flex-start;
   align-items: baseline;
 }
-  
+
 .technical-knowledge-list li img {
   margin-right: 16px;
 }
 
 .my-works .work-item img {
-    width: 100%;
+  width: 100%;
 }
 
 .my-works .work-item .work-title {
@@ -221,7 +221,7 @@ header a {
 }
 
 .about-me .bottom .technical-knowledge {
-   width: 100%;
+  width: 100%;
 }
 
 .about-me .bottom .technical-knowledge .knowledge-area {
