@@ -9,7 +9,7 @@ a {
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .header {
@@ -21,7 +21,7 @@ li {
 }
 
 .header a {
-  color: #6070FF;
+  color: #6070ff;
 }
 
 .header-brand {
@@ -59,7 +59,7 @@ li {
 }
 
 .header-section .connect {
-    color: #6070FF;
+  color: #6070ff;
 }
 
 .header-section-icon-container ul {
