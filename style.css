@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0 2px;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -72,6 +75,7 @@ header a {
   grid-template-columns: 1fr;
   grid-gap: 88px;
   padding: 120px 24px;
+  background-color: #e5e5e5;
 }
 
 .my-works .work-item {
@@ -185,12 +189,16 @@ header a {
 }
 
 .my-works .work-item .view-work-btn:hover,
-.my-works .work-item .view-work-btn:active,
-.about-me .resume-btn:hover,
-.about-me .resume-btn:active {
+.about-me .resume-btn:hover {
   color: #fff;
   border: solid 1px #6070ff;
   background-color: #6070ff;
+}
+
+.my-works .work-item .view-work-btn:active,
+.about-me .resume-btn:active{
+  background-color: #2230d2;
+  border: solid 1px #2230d2;
 }
 
 .about-me {
