@@ -196,7 +196,7 @@ header a {
 }
 
 .my-works .work-item .view-work-btn:active,
-.about-me .resume-btn:active{
+.about-me .resume-btn:active {
   background-color: #2230d2;
   border: solid 1px #2230d2;
 }
