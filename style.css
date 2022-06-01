@@ -170,7 +170,8 @@ header a {
 }
 
 .my-works .work-item .view-work-btn,
-.about-me .resume-btn {
+.about-me .resume-btn,
+footer .footer-container .submit-btn {
   border-radius: 8px;
   text-align: center;
   padding: 12px;
@@ -181,22 +182,31 @@ header a {
   line-height: 24px;
 }
 
+footer .contact-form ul li .submit-btn {
+  margin-top: 0;
+  border: none;
+}
+
 .my-works .work-item .view-work-btn:enabled,
-.about-me .resume-btn:enabled {
+.about-me .resume-btn:enabled,
+footer .footer-container .submit-btn:enabled {
   color: #6070ff;
   border: solid 1px #6070ff;
   background-color: #fff;
 }
 
 .my-works .work-item .view-work-btn:hover,
-.about-me .resume-btn:hover {
+.about-me .resume-btn:hover,
+footer .footer-container .submit-btn:hover {
   color: #fff;
   border: solid 1px #6070ff;
   background-color: #6070ff;
+  cursor: pointer;
 }
 
 .my-works .work-item .view-work-btn:active,
-.about-me .resume-btn:active {
+.about-me .resume-btn:active,
+footer .footer-container .submit-btn:active {
   background-color: #2230d2;
   border: solid 1px #2230d2;
 }
@@ -261,4 +271,62 @@ header a {
   font-size: 15px;
   line-height: 20px;
   color: #253858;
+}
+
+/* Footer */
+
+footer {
+  background-color: #6070ff;
+  border-top-left-radius: 70px;
+  width: 100%;
+  height: 709.17px;
+  padding: 70px 24px 48px;
+}
+
+.footer-container {
+  background-image: url(./img/contact\ form\ shapes-mobile@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: contain;
+}
+
+.contact-form-text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-form-text-info .contact-form-heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #fff;
+}
+
+.contact-form-text-info .contact-form-text {
+  text-align: center;
+  color: #fff;
+  width: 350px;
+  height: 102px;
+}
+
+footer .contact-form li {
+  display: flex;
+}
+
+footer .contact-form ul li input,
+footer .contact-form ul li textarea {
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  flex-grow: 1;
+  color: #172b4d;
 }
