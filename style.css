@@ -391,13 +391,13 @@ footer .contact-form ul li textarea {
   }
 
   .header-section-container {
-    margin:  0 auto ; 
+    margin: 0 auto;
     width: 80%;
     padding: 20px 50px;
   }
 
   .header-section-container .header-section-title {
-    color: #091E42;
+    color: #091e42;
     width: 70%;
     font-weight: 700;
     font-size: 48px;
@@ -411,7 +411,7 @@ footer .contact-form ul li textarea {
     line-height: 28px;
     text-align: justify;
   }
- 
+
   .my-works {
     display: flex;
     flex-direction: column;
@@ -427,7 +427,7 @@ footer .contact-form ul li textarea {
     align-items: center;
   }
 
-  .my-works .reverse { 
+  .my-works .reverse {
     flex-direction: row-reverse;
   }
 
