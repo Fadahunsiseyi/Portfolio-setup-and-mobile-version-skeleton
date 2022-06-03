@@ -48,7 +48,7 @@ header a {
 }
 
 .logo {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .logo:hover {
