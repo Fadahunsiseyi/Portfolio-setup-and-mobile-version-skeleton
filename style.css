@@ -15,6 +15,15 @@ li {
   list-style-type: none;
 }
 
+img {
+  transition: 1s;
+}
+
+img:hover {
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -36,6 +45,14 @@ header a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: rotate(20deg);
 }
 
 .navbar-hamburger .navigation-menu {
@@ -193,6 +210,8 @@ footer .footer-container .submit-btn {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
+  background-color: #fff;
+  transition: background-color 1s;
 }
 
 footer .contact-form ul li .submit-btn {
