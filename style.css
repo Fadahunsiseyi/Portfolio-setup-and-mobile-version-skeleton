@@ -427,6 +427,13 @@ footer .contact-form ul li textarea {
     align-items: center;
   }
 
+  .about-me .top {
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .my-works .work-item .top {
     width: 50%;
     padding-right: 10px;
@@ -451,13 +458,6 @@ footer .contact-form ul li textarea {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
-  }
-
-  .about-me .top {
-    padding: 10px;
-    height: 400px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .about-me .top h2 {
