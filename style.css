@@ -427,6 +427,19 @@ footer .contact-form ul li textarea {
     align-items: center;
   }
 
+  .my-works .work-item .top {
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .my-works .work-item .top img {
+    width: 100%;
+  }
+
+  .my-works .work-item .bottom {
+    width: 50%;
+  }
+
   .my-works .reverse {
     flex-direction: row-reverse;
   }
