@@ -2,9 +2,13 @@
 
 * {
   box-sizing: border-box;
-  margin: 0 2px;
+  margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
 }
 
 a {
@@ -61,9 +65,10 @@ header a {
 
 .header-section {
   display: flex;
-  padding: 100px 24px 24px;
+  padding: 100px 30px 24px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-image: url(./img/header-bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,15 +105,21 @@ header a {
   flex-direction: row;
 }
 
+.header-section-icon-container ul li {
+  margin-right: 20px;
+}
+
 .my-works {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 88px;
-  padding: 120px 24px;
+  grid-gap: 70px;
+  padding: 100px 2px;
   background-color: #e5e5e5;
+  width: 100%;
 }
 
 .my-works .work-item {
+  width: 100%;
   background-color: #fff;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
@@ -124,7 +135,7 @@ header a {
 }
 
 .my-works .work-item img {
-  width: 400px;
+  width: 100%;
 }
 
 .my-works .work-item .work-title {
@@ -318,8 +329,8 @@ footer {
 .footer-container {
   background-image: url(./img/contact\ form\ shapes-mobile@2x.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: contain;
+  background-size: center;
+  background-position: center;
 }
 
 .contact-form-text-info {
@@ -341,7 +352,7 @@ footer {
 .contact-form-text-info .contact-form-text {
   text-align: center;
   color: #fff;
-  width: 350px;
+  width: 100%;
   height: 102px;
 }
 
@@ -359,8 +370,8 @@ footer .contact-form ul li textarea {
   font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 20px;
-  flex-grow: 1;
   color: #172b4d;
+  width: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -406,7 +417,6 @@ footer .contact-form ul li textarea {
     background-image: url(./img/Header\ bg@2x.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: contain;
   }
 
   .header-section-container {
