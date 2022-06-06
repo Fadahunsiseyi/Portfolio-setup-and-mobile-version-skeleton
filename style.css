@@ -105,6 +105,19 @@ header a {
   flex-direction: row;
 }
 
+.technical-knowledge-list li {
+  padding: 12px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+}
+
 .header-section-icon-container ul li {
   margin-right: 20px;
 }
@@ -301,19 +314,6 @@ footer .footer-container .submit-btn:active {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-}
-
-.technical-knowledge-list li {
-  padding: 12px;
-  background-color: #f7f7f9;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #253858;
 }
 
 /* Footer */
