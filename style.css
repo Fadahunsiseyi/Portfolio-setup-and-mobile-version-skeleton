@@ -63,6 +63,88 @@ header a {
   display: none;
 }
 
+.menu-wrapper .menu-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #6070ff;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.menu-wrapper.open-menu .menu-overlay {
+  z-index: 1;
+  opacity: 1;
+}
+
+.menu-wrapper.open-menu .menu-content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  width: calc(100vw - 48px);
+  height: calc(100vw - 48px);
+  padding: 24px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 45px;
+  justify-content: center;
+}
+
+.menu-wrapper.open-menu .menu-toggle {
+  align-items: flex-end;
+}
+
+.navigation-menu {
+  display: none;
+}
+
+.menu-wrapper.open-menu .navigation-menu {
+  display: block;
+}
+
+.menu-wrapper.open-menu .navigation-menu ul li a {
+  color: #fff !important;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #6070ff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-wrapper.open-menu .menu-toggle span {
+  position: absolute;
+  background: white;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:first-child {
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
 .header-section {
   display: flex;
   padding: 100px 30px 24px;
@@ -388,9 +470,22 @@ footer .contact-form ul li textarea {
     line-height: 20px;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
+  
+.navbar-hamburger .navigation-menu {
+  display: block;
+}
+
   .navbar-hamburger .navigation-menu {
     display: block;
     width: 20%;
+  }
+
+  .navigation-menu ul li {
+   margin-right: 20px;
   }
 
   .technical-knowledge ul {
@@ -517,6 +612,10 @@ footer .contact-form ul li textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-container .contact-form-text {
+    width: 40%;
   }
 
   .footer-container input,

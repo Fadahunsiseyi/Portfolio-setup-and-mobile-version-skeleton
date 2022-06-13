@@ -14,8 +14,13 @@
           <div class="logo">
           <a class="header-brand" href="/">Fadahunsi</a>
         </div>
-          <div>
-            <img src="./img/Union.png" alt="The hamburger menu" class="hamburger-icon" />
+        <div class="menu-wrapper" id="menuWrapper" onclick="menuMob()">
+          <div class="menu-overlay"></div>
+        <div class="menu-content">
+          <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div class="navigation-menu">
             <ul>
@@ -24,6 +29,8 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+        </div>
+      </div>
         </nav>
     </header>
     <section class="header-section">
@@ -251,5 +258,6 @@
         </form>
       </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
