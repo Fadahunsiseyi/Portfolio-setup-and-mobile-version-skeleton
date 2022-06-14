@@ -133,6 +133,10 @@ header a {
   background: white;
 }
 
+.menu-wrapper .menu-toggle span:hover {
+  cursor: pointer;
+}
+
 .menu-wrapper.open-menu .menu-toggle span:first-child {
   transform: translateY(-50%) rotate(45deg);
   transform-origin: center;
@@ -143,6 +147,10 @@ header a {
   transform: translateY(-50%) rotate(-45deg);
   transform-origin: center;
   top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:nth-child(2) {
+  display: none;
 }
 
 .header-section {
