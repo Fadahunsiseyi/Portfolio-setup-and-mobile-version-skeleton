@@ -112,8 +112,13 @@ header a {
   display: block;
 }
 
+.menu-wrapper.open-menu .navigation-menu ul li {
+  padding: 20px;
+}
+
 .menu-wrapper.open-menu .navigation-menu ul li a {
   color: #fff !important;
+  font-weight: 700 !important;
 }
 
 .menu-toggle span {
@@ -133,6 +138,7 @@ header a {
 
 .menu-wrapper.open-menu .menu-toggle span {
   position: absolute;
+  right: -2rem;
   background: white;
 }
 
