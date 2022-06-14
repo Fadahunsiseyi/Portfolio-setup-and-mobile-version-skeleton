@@ -59,7 +59,136 @@ header a {
   transform: rotate(20deg);
 }
 
+.navigation-menu {
+  display: none;
+}
+
 .navbar-hamburger .navigation-menu {
+  display: none;
+}
+
+.menu-wrapper .menu-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #6070ff;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-wrapper.open-menu .menu-overlay {
+  z-index: 1;
+  opacity: 1;
+}
+
+.menu-wrapper.open-menu .menu-content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  width: calc(100vw - 48px);
+  height: calc(100vw - 48px);
+  padding: 24px;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 45px;
+  justify-content: center;
+}
+
+.menu-wrapper.open-menu .menu-toggle {
+  align-items: flex-end;
+}
+
+.menu-wrapper.open-menu .navigation-menu {
+  display: block;
+}
+
+.technical-knowledge-list li {
+  padding: 12px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+}
+
+.header-section-icon-container ul li {
+  margin-right: 20px;
+}
+
+footer .contact-form li {
+  display: flex;
+}
+
+.menu-wrapper.open-menu .navigation-menu ul li {
+  padding: 20px;
+}
+
+.menu-wrapper.open-menu .navigation-menu ul li a {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #6070ff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-section-title span {
+  color: #36b37b;
+}
+
+.menu-wrapper.open-menu .menu-toggle span {
+  position: absolute;
+  right: -2rem;
+  background: white;
+}
+
+.menu-wrapper .menu-toggle span:hover {
+  cursor: pointer;
+}
+
+.my-works .work-item .work-subtitle span {
+  height: 100%;
+  position: relative;
+}
+
+.my-works .work-item .work-subtitle span + span {
+  margin: 0 16px;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:first-child {
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:nth-child(2) {
   display: none;
 }
 
@@ -83,10 +212,6 @@ header a {
   width: 300px;
 }
 
-.header-section-title span {
-  color: #36b37b;
-}
-
 .header-section-text {
   margin: 20px 0;
   color: #344563;
@@ -103,23 +228,6 @@ header a {
   margin: 15px 0;
   display: flex;
   flex-direction: row;
-}
-
-.technical-knowledge-list li {
-  padding: 12px;
-  background-color: #f7f7f9;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #253858;
-}
-
-.header-section-icon-container ul li {
-  margin-right: 20px;
 }
 
 .my-works {
@@ -168,15 +276,6 @@ header a {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-}
-
-.my-works .work-item .work-subtitle span {
-  height: 100%;
-  position: relative;
-}
-
-.my-works .work-item .work-subtitle span + span {
-  margin: 0 16px;
 }
 
 .my-works .work-item .work-subtitle span:first-of-type {
@@ -356,10 +455,6 @@ footer {
   height: 102px;
 }
 
-footer .contact-form li {
-  display: flex;
-}
-
 footer .contact-form ul li input,
 footer .contact-form ul li textarea {
   background: #fff;
@@ -388,9 +483,24 @@ footer .contact-form ul li textarea {
     line-height: 20px;
   }
 
+  .menu-toggle {
+    display: none;
+  }
+
   .navbar-hamburger .navigation-menu {
     display: block;
     width: 20%;
+  }
+
+  .technical-knowledge li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .navigation-menu ul li {
+    margin-right: 20px;
   }
 
   .technical-knowledge ul {
@@ -498,13 +608,6 @@ footer .contact-form ul li textarea {
     padding-bottom: 10px;
   }
 
-  .technical-knowledge li {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 20px;
-  }
-
   footer {
     background-image: url(./img/contact\ form\ background\ shapes@2x.png);
     background-repeat: no-repeat;
@@ -517,6 +620,10 @@ footer .contact-form ul li textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-container .contact-form-text {
+    width: 40%;
   }
 
   .footer-container input,

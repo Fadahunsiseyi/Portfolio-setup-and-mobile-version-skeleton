@@ -14,8 +14,13 @@
           <div class="logo">
           <a class="header-brand" href="/">Fadahunsi</a>
         </div>
-          <div>
-            <img src="./img/Union.png" alt="The hamburger menu" class="hamburger-icon" />
+        <div class="menu-wrapper" id="menuWrapper" onclick="menuMob()">
+          <div class="menu-overlay"></div>
+        <div class="menu-content">
+          <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div class="navigation-menu">
             <ul>
@@ -24,6 +29,8 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+        </div>
+      </div>
         </nav>
     </header>
     <section class="header-section">
@@ -70,7 +77,7 @@
     </section>
     <main>
         <section id="myWork" class="my-works">
-            <div class="work-item">
+            <div id="portfolio" class="work-item">
               <div class="top">
                 <img alt="work-item-img" src="./img/work/work-1-cover.png"/>
               </div>
@@ -160,7 +167,7 @@
           </div>
           </section>
           <section id="aboutMe" class="about-me">
-            <div class="top">
+            <div id="about" class="top">
               <h2 class="title">About Myself</h2>
               <p class="introduction">Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
                 <div class="connect">
@@ -227,7 +234,7 @@
             </div>
           </section>
     </main>
-    <footer>
+    <footer id="contact">
       <div class="footer-container">
         <div class="contact-form-text-info">
           <h2 class="contact-form-heading">Contact Me</h2>
@@ -251,5 +258,6 @@
         </form>
       </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
