@@ -77,7 +77,6 @@ header a {
   transition: all 0.3s ease-in-out;
 }
 
-
 .menu-wrapper.open-menu .menu-overlay {
   z-index: 1;
   opacity: 1;
