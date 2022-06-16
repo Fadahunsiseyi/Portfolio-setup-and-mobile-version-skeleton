@@ -20,6 +20,7 @@ const closeBtn = () => {
   
 PopUp();
 closeBtn();
+<<<<<<< HEAD
 
 const portfolio = [
   {
@@ -52,3 +53,5 @@ document.getElementById('workItem').innerHTML = portfolio.map(port =>
   <button id="seeMore" class="view-work-btn" onclick="PopUp()">See Project</button>
 </div>`
 ).join("");
+=======
+>>>>>>> 6297428209c2db5ecfad37129cc0ec1277f1ca4c
