@@ -99,7 +99,7 @@
                 <li class="technology-tag">css</li>
                 <li class="technology-tag">javascript</li>
               </ul>
-              <button class="view-work-btn" onclick="PopUp()">See Project</button>
+              <button class="view-work-btn">See Project</button>
             </div>
           </div> -->
             <!-- <div class="work-item">
@@ -121,7 +121,7 @@
                 <li class="technology-tag">css</li>
                 <li class="technology-tag">javascript</li>
               </ul>
-              <button class="view-work-btn" onclick="PopUp()">See Project</button>
+              <button class="view-work-btn">See Project</button>
             </div>
           </div> -->
             <!-- <div class="work-item reverse">
@@ -215,12 +215,12 @@
             </div>
           </section>
     </main>
-    <div class="popup-container" >
-      <div class="popup-overlay"></div>
-      <div class="popup-content">
+    <div class="popup-container" id="popupContainer">
+      <div class="popup-overlay" id="popupOverlay"></div>
+      <div class="popup-content" id="popupContent">
         <div class="popup-head">
-          <h2 class="popup-title">Tonic</h2>
-          <span class="popup-close" onclick="closeBtn()"></span>
+          <h2 class="popup-title" id="popupTitle">Tonic</h2>
+          <span class="popup-close" id="popupClose" onclick="closeBtn()"></span>
         </div>
         <div class="popup-subtitle" id="popupSubtitle">
           <span id="popupCompany">Canopy</span>
@@ -246,8 +246,10 @@
             </ul>
             <hr>
             <div class="popup-actions">
-              <button class="popup-action-btn" id="popupLive">See Live <i class="fa fa-external-link" aria-hidden="true"></i></button>
-              <button class="popup-action-btn" id="popupSource" >See Source <i class="fa fa-github" aria-hidden="true"></i></button>
+              <button class="popup-action-btn" id="popupLive">See Live <i class="fa fa-external-link"
+                  aria-hidden="true"></i></button>
+              <button class="popup-action-btn" id="popupSource" >See Source <i class="fa fa-github"
+                  aria-hidden="true"></i></button>
             </div>
           </div>
         </div>

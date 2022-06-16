@@ -19,7 +19,7 @@ const closeBtn = () => {
   }
   
 PopUp();
-closeBtn()
+closeBtn();
 
 const portfolio = [
   {
