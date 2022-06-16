@@ -608,7 +608,6 @@ footer .contact-form ul li textarea {
 
 .popup-container .popup-content .popup-actions {
   display: flex;
-  justify-content: space-between;
   margin: 0 0 12px;
 }
 

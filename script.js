@@ -61,6 +61,20 @@ const portfolio = [
   },
 ]
 
+const popupData = [
+  {
+    title: 'Tonic',
+    span: ['Canopy', 'Back End Dev', 2015],
+    img: ['Snapshoot Portfolio.png'],
+    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.',
+    technologies: ['html', 'css', 'javascript'],
+    btnLive: "See Live",
+    btnSource: "See Source",
+    live: 'https://fadahunsiseyi.github.io/Portfolio-setup-and-mobile-version-skeleton/',
+    source: 'https://github.com/Fadahunsiseyi/Portfolio-setup-and-mobile-version-skeleton'
+  }
+]
+
 document.getElementById('myWork').innerHTML = portfolio.map(port =>
 `<div class="work-item " id="workItem">
 <div class="top">
@@ -83,3 +97,49 @@ document.getElementById('myWork').innerHTML = portfolio.map(port =>
 </div>
 </div>`
 ).join("");
+
+
+
+document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
+  `
+  <div class="popup-overlay" id="popupOverlay"></div>
+  <div class="popup-content" id="popupContent">
+    <div class="popup-head">
+      <h2 class="popup-title" id="popupTitle">${popup.title}</h2>
+      <span class="popup-close" id="popupClose" onclick="closeBtn()"></span>
+    </div>
+    <div class="popup-subtitle" id="popupSubtitle">
+      <span id="popupCompany">${popup.span[0]}</span>
+      <span id="popupRole">${popup.span[1]}</span>
+      <span id="popupYear">${popup.span[2]}</span>
+    </div>
+    <img class="popup-image" alt="work image" id="popupImage" src="./img/${popup.img[0]}">
+    <div class="popup-bottom">
+      <div class="popup-left">
+        <p class="popup-description" id="popupDescription">
+         ${popup.description}
+        </p>
+      </div>
+      <div class="popup-right">
+        <ul class="popup-technologies" id="popupTechnlogies">
+          <li>${popup.technologies[0]}</li>
+          <li>${popup.technologies[1]}</li>
+          <li>${popup.technologies[2]}</li>
+        </ul>
+        <hr>
+        <div class="popup-actions">
+        <a href=${popup.live}>
+          <button class="popup-action-btn" id="popupLive">
+          ${popup.btnLive} <i class="fa fa-external-link" aria-hidden="true"></i>
+          </button>
+              </a>
+              <a href=${popup.source}>
+          <button class="popup-action-btn" id="popupSource" >${popup.btnSource} <i class="fa fa-github"
+              aria-hidden="true"></i></button>
+              </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+  ).join("");
