@@ -7,7 +7,7 @@ const menuMob = () => {
 
 const popupContainer = document.querySelector('.popup-container')
 
-const PopUp  = (id) => {
+const PopUp  = () => {
     if(popupContainer.classList.contains('show')) {
         console.log('show')
     } else {
@@ -18,8 +18,8 @@ const closeBtn = () => {
     popupContainer.classList.remove('show');
   }
   
-PopUp(1)
-closeBtn()
+PopUp();
+closeBtn();
 // const body = document.querySelector('body')
 // const section = document. createElement('section')
 

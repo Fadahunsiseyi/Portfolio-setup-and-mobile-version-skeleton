@@ -28,6 +28,10 @@ img:hover {
   cursor: pointer;
 }
 
+.popup-container .popup-content img:hover {
+  transform: none;
+}
+
 header {
   display: flex;
   flex-direction: row;
