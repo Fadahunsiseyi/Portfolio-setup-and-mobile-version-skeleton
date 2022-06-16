@@ -739,7 +739,7 @@ footer .contact-form ul li textarea {
   .my-works .work-item:nth-child(2) {
     flex-direction: row-reverse !important;
   }
-  
+
   .my-works .work-item:nth-child(4) {
     flex-direction: row-reverse !important;
   }
