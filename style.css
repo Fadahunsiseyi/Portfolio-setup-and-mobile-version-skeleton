@@ -28,6 +28,14 @@ img:hover {
   cursor: pointer;
 }
 
+.technical-knowledge-list li img {
+  margin-right: 16px;
+}
+
+.my-works .work-item img {
+  width: 100%;
+}
+
 .popup-container .popup-content img:hover {
   transform: none;
 }
@@ -137,6 +145,17 @@ footer .contact-form li {
   display: flex;
 }
 
+.popup-container .popup-content .popup-technologies li {
+  background: #ebebff;
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: #6070ff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 8px 12px;
+}
+
 .menu-wrapper.open-menu .navigation-menu ul li {
   padding: 20px;
 }
@@ -174,6 +193,19 @@ footer .contact-form li {
 .my-works .work-item .work-subtitle span {
   height: 100%;
   position: relative;
+}
+
+.popup-container .popup-content .popup-subtitle span {
+  color: #7a869a;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  height: 100%;
+}
+
+.popup-container .popup-content .popup-subtitle span + span {
+  margin: 0 12px;
 }
 
 .my-works .work-item .work-subtitle span + span {
@@ -253,14 +285,6 @@ footer .contact-form li {
   padding: 16px;
   justify-content: flex-start;
   align-items: baseline;
-}
-
-.technical-knowledge-list li img {
-  margin-right: 16px;
-}
-
-.my-works .work-item img {
-  width: 100%;
 }
 
 .my-works .work-item .work-title {
@@ -544,23 +568,10 @@ footer .contact-form ul li textarea {
   padding: 12px 0 16px;
 }
 
-.popup-container .popup-content .popup-subtitle span {
-  color: #7a869a;
-  position: relative;
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 600;
-  height: 100%;
-}
-
 .popup-container .popup-content .popup-subtitle span:first-child {
   color: #344563;
   text-transform: uppercase;
   margin-right: 12px;
-}
-
-.popup-container .popup-content .popup-subtitle span + span {
-  margin: 0 12px;
 }
 
 .popup-container .popup-content .popup-subtitle span + span::before {
@@ -595,17 +606,6 @@ footer .contact-form ul li textarea {
   padding-left: 0;
 }
 
-.popup-container .popup-content .popup-technologies li {
-  background: #ebebff;
-  border-radius: 8px;
-  padding: 4px 12px;
-  color: #6070ff;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  margin: 0 8px 12px;
-}
-
 .popup-container .popup-content .popup-actions {
   display: flex;
   justify-content: space-between;
@@ -614,7 +614,7 @@ footer .contact-form ul li textarea {
 
 .popup-container .popup-content .popup-actions .popup-action-btn {
   flex-grow: 1;
-  margin:  6px;
+  margin: 6px;
   border-radius: 8px;
   text-align: center;
   padding: 12px;
