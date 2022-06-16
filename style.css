@@ -737,6 +737,14 @@ footer .contact-form ul li textarea {
     align-items: center;
   }
 
+  .my-works .work-item:nth-child(2) {
+    flex-direction: row-reverse !important;
+  }
+  
+  .my-works .work-item:nth-child(4) {
+    flex-direction: row-reverse !important;
+  }
+
   .about-me .top {
     padding: 10px;
     height: 400px;
@@ -755,10 +763,6 @@ footer .contact-form ul li textarea {
 
   .my-works .work-item .bottom {
     width: 50%;
-  }
-
-  .my-works .reverse {
-    flex-direction: row-reverse;
   }
 
   .about-me {
