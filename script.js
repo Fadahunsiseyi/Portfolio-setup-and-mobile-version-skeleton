@@ -233,8 +233,11 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
     const _validateUserEmail = validateEmail()
     const _validateMessage = validateMessage()
     const allValidation = _validateMessage && _validateUserEmail && _validateUserName
-    if(allValidation) {
-      contactForm.submit()
+    if(!allValidation) {
+      document.querySelector('.btn-error').innerHTML = `<p>Please fill all required fields</p>`
+      console.log('error is big')
+    } else {
+       contactForm.submit()
     }
   })
 
