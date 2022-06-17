@@ -148,7 +148,6 @@
           </section>
     </main>
     <div class="popup-container" id="popupContainer">
-     <a href=""></a>
     </div>
     <footer id="contact">
       <div class="footer-container">
@@ -156,20 +155,24 @@
           <h2 class="contact-form-heading">Contact Me</h2>
           <p class="contact-form-text">If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
         </div>
-        <form action="https://formspree.io/f/xbjwdrql" method="post" class="contact-form">
+        <form action="https://formspree.io/f/xbjwdrql" method="post" name="contactform" id="contact-Form" class="contact-form">
           <ul>
-            <li>
-               <input type="text" maxlength="30" placeholder="Enter your name" required>
+            <li class="form-field">
+              <small></small>
+               <input type="text" maxlength="30" id="userName" class="username" placeholder="Enter your name">
             </li>
-            <li>
-               <input type="email" placeholder="Enter your Email" required>
+            <li class="form-field">
+              <small></small>
+               <input type="email"  id="userEmail" class="username" placeholder="Enter your Email">
             </li>
-            <li>
-              <textarea name="message" id="textarea-message" cols="30" rows="10" maxlength="500" placeholder="Write your message"></textarea>
+            <li class="form-field">
+              <small></small>
+              <textarea class="username" id="textareaMessage" cols="30" rows="10" maxlength="500" placeholder="Write your message"></textarea>
             </li>
-            <li>
+            <li class="form-field">
               <button type="submit" class="submit-btn">Get in Touch</button>
             </li>
+            <p class="btn-error"></p>
           </ul>
         </form>
       </div>

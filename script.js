@@ -143,3 +143,115 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
   </div>
   `
   ).join("");
+
+
+
+  //FORM VALIDATION
+  const contactForm = document.getElementById('contact-Form');
+  const userName = document.getElementById('userName')
+  const userEmail = document.getElementById('userEmail')
+  const textArea = document.getElementById('textareaMessage')
+
+  const _required = (value) => value !== '';
+  const _between = (length, min, max) => !(length > min || length < max)
+  const _emailValidation = (value) => {
+    const _regularExpression = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return  _regularExpression.test(value)
+  }
+
+  const showError = (input, message) => {
+    const inputField = input.parentElement
+    inputField.classList.remove('success')
+    inputField.classList.add('failure')
+
+    const errorText = inputField.querySelector('small')
+    errorText.textContent = message
+  }
+  const showSuccess = (input) => {
+    const inputField = input.parentElement
+    inputField.classList.remove('failure')
+    inputField.classList.add('success')
+
+    const errorText = inputField.querySelector('small')
+      errorText.textContent = '';
+  }
+
+  const validateUserName = () => {
+    const username = userName.value.trim()
+    const _min = 3
+    const _max = 30
+    var _valid = false
+    if(!_required(username)) {
+      showError(userName, 'User name must be filled with text')
+    } else if (!_between(username.length, _max, _min)) {
+      showError(userName, 'User name must have a minimum of 3 letters and a maximum of 30')
+    } else {
+      showSuccess(userName)
+      _valid = true
+    }
+    return _valid
+  }
+
+  const validateEmail = () => {
+    const useremail = userEmail.value.trim().toLowerCase()
+    let valid = false
+    const pattern = /[A-Z]/
+    if(pattern.test(userEmail.value)) {
+      showError(userEmail, 'Email has to be in lowercase')
+    } else if (!_required(useremail)) {
+      showError(userEmail, 'Please enter email')
+    } else if (!_emailValidation(useremail)) {
+      showError(userEmail, 'Please enter a valid email')
+    }
+    else {
+      showSuccess(userEmail)
+      valid = true
+    }
+    return valid
+  }
+
+  const validateMessage = () => {
+    let valid = false
+    const _min = 15;
+    const _max = 500
+    const textareaMessage = textArea.value.trim()
+
+    if(!_required(textareaMessage)) {
+      showError(textArea, 'Please enter a message')
+    } else if (!_between(textareaMessage.length, _max, _min)) {
+      showError(textArea, 'Message should at least 15 - 500 characters')
+    } else {
+      showSuccess(textArea)
+      valid = true
+    }
+    return valid
+  }
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const _validateUserName = validateUserName()
+    const _validateUserEmail = validateEmail()
+    const _validateMessage = validateMessage()
+    const allValidation = _validateMessage && _validateUserEmail && _validateUserName
+    if(!allValidation) {
+      document.querySelector('.btn-error').innerHTML = `<p>Please fill all required fields</p>`
+    } else {
+       contactForm.submit()
+    }
+  })
+
+  contactForm.addEventListener('input', (e) => {
+    switch (e.target.id) {
+      case 'userName':
+        validateUserName();
+        break;
+      case 'userEmail':
+        validateEmail();
+        break;
+      case 'textareaMessage':
+        validateMessage();
+        break;
+      default:
+        validateUserName();
+    }
+  });
