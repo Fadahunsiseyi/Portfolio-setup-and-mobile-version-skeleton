@@ -645,7 +645,8 @@ footer .contact-form ul li textarea {
 }
 
 .form-field small {
-  color: #ff0d00;
+  color: red;
+  font-size: 16px;
   margin: 0;
   word-wrap: break-word;
 }

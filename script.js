@@ -165,7 +165,6 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
     inputField.classList.add('failure')
 
     const errorText = inputField.querySelector('small')
-    console.log(errorText, message, 'the message')
     errorText.textContent = message
   }
   const showSuccess = (input) => {
@@ -174,8 +173,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
     inputField.classList.add('success')
 
     const errorText = inputField.querySelector('small')
-    console.log(errorText)
-    errorText.textContent = '';
+      errorText.textContent = '';
   }
 
   const validateUserName = () => {
@@ -230,7 +228,6 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
   }
 
   contactForm.addEventListener('submit', (e) => {
-    console.log('first')
     e.preventDefault();
     const _validateUserName = validateUserName()
     const _validateUserEmail = validateEmail()
