@@ -193,7 +193,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
   }
 
   const validateEmail = () => {
-    const useremail = userEmail.value.trim()
+    const useremail = userEmail.value.trim().toLowerCase()
     let valid = false
     const pattern = /[A-Z]/
     if(pattern.test(userEmail.value)) {
