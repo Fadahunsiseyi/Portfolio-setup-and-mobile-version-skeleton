@@ -147,6 +147,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
 
 
   //FORM VALIDATION
+  
   const contactForm = document.getElementById('contact-Form');
   const userName = document.getElementById('userName')
   const userEmail = document.getElementById('userEmail')
@@ -255,3 +256,32 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
         validateUserName();
     }
   });
+
+
+
+
+  //LOCAL STORAGE
+
+
+  const formData = {
+    userName: document.querySelector('.username').value,
+    userEmail: document.querySelector('.useremail').value,
+    userMessage: document.querySelector('.usermessage').value,
+  }
+
+  let getFormData = window.localStorage.getItem('formData')
+  if(getFormData) {
+    getFormData = JSON.parse(getFormData)
+    document.querySelector('.username').value = getFormData.userName
+    document.querySelector('.useremail').value = getFormData.userEmail
+    document.querySelector('.usermessage').value = getFormData.userMessage
+  }
+
+  Array.from(contactForm).forEach((field) => {
+    field.addEventListener('input', () => {
+      formData.userName = document.querySelector('.username').value
+      formData.userEmail = document.querySelector('.useremail').value
+      formData.userMessage = document.querySelector('.usermessage').value
+      localStorage.setItem('formData', JSON.stringify(formData))
+    })
+  })
