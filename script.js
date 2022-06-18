@@ -270,18 +270,15 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
 
   let getFormData = window.localStorage.getItem('formData')
   if(getFormData) {
-    console.log(getFormData)
     getFormData = JSON.parse(getFormData)
-    console.log(getFormData)
     document.querySelector('.username').value = getFormData.userName
     document.querySelector('.useremail').value = getFormData.userEmail
     document.querySelector('.usermessage').value = getFormData.userMessage
   }
 
   Array.from(contactForm).forEach((field) => {
-    console.log(field)
     field.addEventListener('input', () => {
-      formData.userName = document.querySelector('.usermessage').value
+      formData.userName = document.querySelector('.username').value
       formData.userEmail = document.querySelector('.useremail').value
       formData.userMessage = document.querySelector('.usermessage').value
       localStorage.setItem('formData', JSON.stringify(formData))
