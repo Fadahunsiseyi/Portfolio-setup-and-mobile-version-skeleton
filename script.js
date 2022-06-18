@@ -147,6 +147,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
 
 
   //FORM VALIDATION
+  
   const contactForm = document.getElementById('contact-Form');
   const userName = document.getElementById('userName')
   const userEmail = document.getElementById('userEmail')
