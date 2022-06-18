@@ -255,3 +255,35 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
         validateUserName();
     }
   });
+
+
+
+
+  //LOCAL STORAGE
+
+
+  const formData = {
+    userName: document.querySelector('.username').value,
+    userEmail: document.querySelector('.useremail').value,
+    userMessage: document.querySelector('.usermessage').value,
+  }
+
+  let getFormData = window.localStorage.getItem('formData')
+  if(getFormData) {
+    console.log(getFormData)
+    getFormData = JSON.parse(getFormData)
+    console.log(getFormData)
+    document.querySelector('.username').value = getFormData.userName
+    document.querySelector('.useremail').value = getFormData.userEmail
+    document.querySelector('.usermessage').value = getFormData.userMessage
+  }
+
+  Array.from(contactForm).forEach((field) => {
+    console.log(field)
+    field.addEventListener('input', () => {
+      formData.userName = document.querySelector('.usermessage').value
+      formData.userEmail = document.querySelector('.useremail').value
+      formData.userMessage = document.querySelector('.usermessage').value
+      localStorage.setItem('formData', JSON.stringify(formData))
+    })
+  })
