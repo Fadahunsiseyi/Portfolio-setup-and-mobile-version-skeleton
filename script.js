@@ -147,7 +147,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
 
 
   //FORM VALIDATION
-  
+
   const contactForm = document.getElementById('contact-Form');
   const userName = document.getElementById('userName')
   const userEmail = document.getElementById('userEmail')
@@ -194,7 +194,7 @@ document.getElementById('popupContainer').innerHTML = popupData.map(popup =>
   }
 
   const validateEmail = () => {
-    const useremail = userEmail.value.trim().toLowerCase()
+    const useremail = userEmail.val.trim().toLowerCase()
     let valid = false
     const pattern = /[A-Z]/
     if(pattern.test(userEmail.value)) {
